@@ -7,6 +7,10 @@ dist/
 # dependencies
 node_modules/
 
+# editor / IDE (no necesario para compilar ni desplegar)
+.vscode/
+.idea/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
@@ -16,9 +20,8 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+.env*.local
 
-# macOS-specific files
+# OS-specific files
 .DS_Store
-
-# jetbrains setting folder
-.idea/
+Thumbs.db

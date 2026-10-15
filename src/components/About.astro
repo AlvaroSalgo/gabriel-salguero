@@ -1,0 +1,61 @@
+---
+import { about } from '../data/site';
+---
+
+<section class="space-y-10 pt-6" id="autor">
+	<header class="space-y-3">
+		<span class="text-[10px] font-sans tracking-[0.3em] uppercase text-ink-subtle block">
+			{about.label}
+		</span>
+		<h2 class="font-serif text-2xl sm:text-3xl text-ink-black font-normal leading-snug">
+			{about.title}
+		</h2>
+		<p class="text-[11px] font-sans tracking-[0.2em] uppercase text-ink-subtle">
+			{about.meta}
+		</p>
+	</header>
+
+	<div class="space-y-6 text-ink-dim text-base sm:text-[17px] leading-[1.8] font-light">
+		<p>
+			{about.body}
+		</p>
+	</div>
+
+	<!-- Cita de apertura -->
+	<div class="my-12 py-8 px-2 sm:px-6 border-l border-ink-black space-y-4">
+		<span class="text-[9px] font-sans tracking-[0.25em] uppercase text-ink-subtle block">
+			Sobre el autor
+		</span>
+		<blockquote class="font-serif text-xl sm:text-2xl text-ink-black leading-relaxed italic font-normal">
+			{about.quote}
+		</blockquote>
+	</div>
+
+	<!-- Recorte de prensa -->
+	<figure class="flex flex-col sm:flex-row items-start gap-6 pt-2">
+		<img
+			src={about.press.image.src}
+			alt={about.press.image.alt}
+			class="w-full sm:w-64 border border-border-hairline bg-white"
+		/>
+		<figcaption class="italic font-serif text-sm tracking-normal text-ink-subtle">
+			{about.press.caption}
+		</figcaption>
+	</figure>
+
+	<div
+		class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-6 pt-6 text-xs font-sans tracking-[0.15em] uppercase text-ink-dim border-t border-border-faint"
+	>
+		<div class="flex items-center gap-6 shrink-0">
+			<a
+				href={about.ctas[0].href}
+				class="text-ink-black hover:italic transition-all border-b border-ink-black pb-0.5"
+			>
+				{about.ctas[0].label}
+			</a>
+			<a href={about.ctas[1].href} class="hover:text-ink-black transition-colors">
+				{about.ctas[1].label}
+			</a>
+		</div>
+	</div>
+</section>

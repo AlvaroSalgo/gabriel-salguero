@@ -1,0 +1,33 @@
+---
+import { site, nav } from '../data/site';
+---
+
+<header
+	class="w-full bg-surface-pure border-b border-border-hairline sticky top-0 z-50 bg-opacity-95 backdrop-blur-sm"
+>
+	<div class="max-w-4xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+		<a href="#inicio" class="flex flex-col group">
+			<span class="font-serif text-lg tracking-normal font-normal text-ink-black group-hover:italic transition-all">
+				{site.name}
+			</span>
+			<span class="text-[9px] tracking-[0.28em] uppercase text-ink-subtle font-sans font-light">
+				{site.tagline}
+			</span>
+		</a>
+		<nav class="hidden md:flex items-center gap-8 text-[11px] font-sans tracking-[0.2em] uppercase text-ink-dim">
+			{
+				nav.map((item, index) =>
+					index === 0 ? (
+						<a href={item.href} class="text-ink-black border-b border-ink-black pb-0.5">
+							{item.label}
+						</a>
+					) : (
+						<a href={item.href} class="hover:text-ink-black transition-colors pb-0.5">
+							{item.label}
+						</a>
+					)
+				)
+			}
+		</nav>
+	</div>
+</header>

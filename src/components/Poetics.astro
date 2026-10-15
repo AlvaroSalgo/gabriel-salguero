@@ -1,0 +1,26 @@
+---
+import { poetics } from '../data/site';
+---
+
+<section class="space-y-10 py-10 border-y border-border-hairline" id="poetica">
+	<div class="text-[10px] font-sans tracking-[0.3em] uppercase text-ink-subtle">
+		{poetics.label}
+	</div>
+
+	<blockquote class="font-serif text-2xl sm:text-3xl text-ink-black font-light leading-[1.4] italic max-w-2xl">
+		{poetics.quote}
+	</blockquote>
+
+	<div class="space-y-4 text-ink-dim text-base leading-[1.8] font-light max-w-2xl">
+		<p>
+			{poetics.body}
+		</p>
+	</div>
+
+	<div class="pt-2 flex items-center justify-between text-[11px] font-sans tracking-[0.2em] uppercase text-ink-subtle">
+		<span>{poetics.attribution}</span>
+		<a href={poetics.cta.href} class="text-ink-black hover:italic transition-all">
+			{poetics.cta.label}
+		</a>
+	</div>
+</section>

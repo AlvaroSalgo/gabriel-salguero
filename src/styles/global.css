@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+/* ── Design tokens (Variante Tipográfica Esencial — «Definitiva») ──────── */
+@theme {
+	--color-surface-pure: #faf9f6;
+	--color-ink-black: #111111;
+	--color-ink-dim: #4a4a4a;
+	--color-ink-subtle: #7d7c78;
+	--color-border-hairline: #e6e4df;
+	--color-border-faint: #eeece6;
+
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #faf9f6;
+	}
+
+	body {
+		overscroll-behavior: none;
+	}
+
+	::selection {
+		background: #1a1c1c;
+		color: #faf9f6;
+	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+}

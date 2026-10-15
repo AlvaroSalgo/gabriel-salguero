@@ -1,0 +1,35 @@
+---
+import { curriculum } from '../data/site';
+---
+
+<section class="space-y-10 pt-4" id="curriculum">
+	<div class="flex items-end justify-between border-b border-border-hairline pb-4">
+		<div>
+			<span class="text-[10px] font-sans tracking-[0.3em] uppercase text-ink-subtle block mb-1">
+				{curriculum.label}
+			</span>
+			<h2 class="font-serif text-2xl text-ink-black font-normal">{curriculum.heading}</h2>
+		</div>
+		<span class="text-[10px] font-sans tracking-[0.2em] uppercase text-ink-subtle">{curriculum.meta}</span>
+	</div>
+
+	<p class="text-ink-dim text-base leading-[1.8] font-light max-w-2xl">{curriculum.intro}</p>
+
+	<ul class="divide-y divide-border-faint space-y-0 text-sm">
+		{
+			curriculum.items.map((entry) => (
+				<li class="py-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 group">
+					<div class="space-y-1 max-w-2xl">
+						<a class="font-serif text-lg text-ink-black group-hover:italic transition-all block">
+							{entry.title}
+						</a>
+						{entry.body && <span class="text-xs text-ink-subtle font-light leading-relaxed block">{entry.body}</span>}
+					</div>
+					<div class="text-[10px] font-sans tracking-[0.2em] uppercase text-ink-subtle sm:text-right shrink-0">
+						{entry.date}
+					</div>
+				</li>
+			))
+		}
+	</ul>
+</section>
