@@ -1,0 +1,10 @@
+node_modules
+dist
+.astro
+.git
+.vscode
+.idea
+*.log
+.env*
+README.md
+AGENTS.md
